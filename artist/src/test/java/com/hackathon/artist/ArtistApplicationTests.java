@@ -1,10 +1,10 @@
-package com.hackathon.artistservice;
+package com.hackathon.artist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ArtistServiceApplicationTests {
+class ArtistApplicationTests {
 
 	@Test
 	void contextLoads() {

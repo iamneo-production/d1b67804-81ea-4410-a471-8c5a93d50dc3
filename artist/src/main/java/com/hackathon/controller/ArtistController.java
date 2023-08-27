@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.hackathon.artist.dto.ArtistDTO;
+import com.hackathon.artist.dto.*;
 import com.hackathon.artist.model.ArtworkGallery;
 import com.hackathon.artist.model.GalleryComment;
 import com.hackathon.artist.model.GalleryLikeDislike;

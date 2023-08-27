@@ -2,7 +2,7 @@ package com.hackathon.artist.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.hackathon.artist.dto.ArtistDTO;
+import com.hackathon.artist.dto.*;
 import com.hackathon.artist.model.ArtworkGallery;
 import com.hackathon.artist.model.GalleryComment;
 import com.hackathon.artist.model.GalleryLikeDislike;

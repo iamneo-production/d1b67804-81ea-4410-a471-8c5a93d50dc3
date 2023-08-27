@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.hackathon.artist.dto.ArtistDTO;
+import com.hackathon.artist.dto.*;
 import com.hackathon.artist.model.ArtworkGallery;
 import com.hackathon.artist.model.GalleryComment;
 import com.hackathon.artist.model.GalleryLikeDislike;
@@ -81,7 +81,7 @@ public class ArtistServiceImpl implements ArtistService{
 		Optional<ArtworkGallery> artworkGallery=artistRepo.findById(statusDTO.getPictureId());
 		if(artworkGallery.isPresent()){
 			ArtworkGallery awg=artworkGallery.get();
-			awg.isSold(statusDTO.isSold);
+			awg.setSold(statusDTO.isSold());
 			awg.setPurchaseBy(statusDTO.getPurchaseBy());
 			return convertEntityToDTO(artistRepo.save(awg));
 		}else{
