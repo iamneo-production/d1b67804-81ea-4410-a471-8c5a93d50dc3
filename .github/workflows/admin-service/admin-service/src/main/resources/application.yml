@@ -1,0 +1,26 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /adminservice
+spring:
+  application:
+    name: admin-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/admin-virtualart?allowPublicKeyRetrieval=true&&useSSL=false
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect 
+success:
+  message: Success
+failure:
+  message: Failed
+secret:
+  key: AuthenticationServiceForVirtualArtGalleryApplication
+error:
+  code: ERR001
