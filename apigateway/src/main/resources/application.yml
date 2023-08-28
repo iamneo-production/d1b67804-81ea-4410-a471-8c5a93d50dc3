@@ -5,16 +5,25 @@ spring:
         enabled: true
         lowerCaseServiceId: true
       routes:
-      - id: greet-api        # Id can be anything
-        uri: lb://GREET-API  # give the same name as Appilication name 
+      - id: artist-service       # Id can be anything
+        uri: lb://ARTIST-SERVICE  # give the same name as Appilication name 
         predicates:
-        - Path=/greet        # Give Api path Name
-      - id: welcome-api
-        uri: lb://WELCOME-API
+        - Path=/artist       # Give Api path Name
+      - id: identity-service
+        uri: lb://IDENTITY-SERVICE
         predicates:
-        - Path=/welcome
+        - Path=/auth
+      - id: bankservice
+        uri: lb://bank-service
+        predicates:
+        - Path=/account
+      - id: sponserserv
+        uri: lb://sponsor-service
+        predicates:
+        - Path=/sponsor
   application:
     name: CLOUD-API-GATEWAY
         
 server:
   port: 2222
+
